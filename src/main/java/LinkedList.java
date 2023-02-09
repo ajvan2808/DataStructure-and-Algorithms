@@ -48,4 +48,22 @@ public class LinkedList {
         // til we meet the Tail
         return current.data;
     }
+
+    public void addBack(int data) {
+        Node newNode = new Node(data);
+
+        // if Head then set and return
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        // else , start at head
+        Node currentNode = head;
+        while (currentNode.next != null) {
+            currentNode = currentNode.next;
+        }
+
+        currentNode.next = newNode;
+    }
 }
