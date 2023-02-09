@@ -48,4 +48,13 @@ public class TestLinkedList {
         Assert.assertEquals(1, linkedList.getFirst());
         Assert.assertEquals(3, linkedList.getLast());
     }
+
+    @Test
+    public void sizeOfList() {
+        linkedList.addFront(3);
+        linkedList.addFront(2);
+        linkedList.addFront(1);
+
+        Assert.assertEquals(3, linkedList.size());
+    }
 }
