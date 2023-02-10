@@ -9,8 +9,9 @@ public class LinkedList {
             this.data = data;
         }
     }
+    static int Size = 0;
+    static Node head;
 
-    private Node head;
     public void addFront(int data) {
         // create Node
         Node newNode = new Node(data);
@@ -18,6 +19,7 @@ public class LinkedList {
         // if head is Null
         if (head == null) {
             head = newNode;
+            Size++;
             return;
         }
 
@@ -26,6 +28,7 @@ public class LinkedList {
 
         // set Head value to this new node
         head = newNode;
+        Size++;
     }
 
     // Get first Node/ Head
@@ -55,6 +58,7 @@ public class LinkedList {
         // if Head then set and return
         if (head == null) {
             head = newNode;
+            Size++;
             return;
         }
 
@@ -65,9 +69,14 @@ public class LinkedList {
         }
 
         currentNode.next = newNode;
+        Size++;
     }
 
-    // Size of list
+    /* Size of list
+        2 ways checking size of list 
+        1. Adding a counter in the list itself to keep trach of the size (best practice)
+        2. Loop through the list
+    */
     public int size() {
         if (head == null) {
             return 0;
@@ -81,5 +90,32 @@ public class LinkedList {
             counter++;
         }
         return counter;
+    }
+
+    public void clearList() {
+        head = null;
+        Size = 0;
+    }
+
+    public void deleteNode(int data) {
+        // if empty list
+        if (head == null) {
+            return;
+        }
+
+        // delete head Node
+        if (head.data == data) {
+            head = head.next;
+        }
+
+        // else walk through list from head
+        Node current = head;
+        while (current.next != null) {
+            if (current.next.data == data) {
+                current.next = current.next.next;
+                // Size--;
+                return;
+            }
+        }
     }
 }
