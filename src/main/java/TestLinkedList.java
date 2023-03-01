@@ -17,7 +17,8 @@ public class TestLinkedList {
         linkedList.addFront(1);
         linkedList.addFront(2);
         linkedList.addFront(3);
-
+        
+        Assert.assertEquals(3, linkedList.Size);
         Assert.assertEquals(3, linkedList.getFirst());
         Assert.assertEquals(1, linkedList.getLast());
     }
@@ -37,5 +38,52 @@ public class TestLinkedList {
         linkedList.addFront(2);
 
         Assert.assertEquals(1, linkedList.getLast());
+    }
+
+    @Test
+    public void AddBack() {
+        linkedList.addBack(1);
+        linkedList.addBack(2);
+        linkedList.addBack(3);
+
+        Assert.assertEquals(1, linkedList.getFirst());
+        Assert.assertEquals(3, linkedList.getLast());
+    }
+    
+    @Test
+    public void sizeOfList() {
+        Assert.assertEquals(0, linkedList.Size);
+
+        linkedList.addFront(3);
+        linkedList.addFront(2);
+        linkedList.addFront(1);
+
+        Assert.assertEquals(3, linkedList.Size);
+    }
+
+    @Test
+    public void Clear() throws Exception {
+        linkedList.addFront(1);
+        linkedList.addFront(2);
+        linkedList.addFront(3);
+
+        linkedList.clearList();
+        
+        Assert.assertEquals(null, linkedList.head);
+        Assert.assertEquals(0, linkedList.Size);
+    }
+
+    @Test
+    public void Delete() {
+        linkedList.addBack(1);
+        linkedList.addBack(2);
+        linkedList.addBack(3);
+
+        linkedList.deleteNode(2);
+
+        Assert.assertEquals(1, linkedList.getFirst());
+        Assert.assertEquals(3, linkedList.getLast());
+        Assert.assertEquals(2, linkedList.size());
+
     }
 }
