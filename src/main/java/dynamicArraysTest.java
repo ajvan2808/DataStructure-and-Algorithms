@@ -52,10 +52,10 @@ public class dynamicArraysTest {
         array.add("b");
         array.add("c");
 
-        array.Contains("b");
+        array.contains("b");
 
-        Assert.assertEquals(true, array.Contains("b"));
-        Assert.assertEquals(false, array.Contains("d"));
+        Assert.assertEquals(true, array.contains("b"));
+        Assert.assertEquals(false, array.contains("d"));
     }
 
     @Test

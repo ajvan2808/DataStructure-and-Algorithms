@@ -84,6 +84,5 @@ public class TestLinkedList {
         Assert.assertEquals(1, linkedList.getFirst());
         Assert.assertEquals(3, linkedList.getLast());
         Assert.assertEquals(2, linkedList.size());
-
     }
 }
