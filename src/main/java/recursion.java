@@ -11,8 +11,8 @@ public class recursion {
         return text;
     }
 
-    public static void main(String[] args) {
-        recursion Rec = new recursion();
-        System.out.println(Rec.stripZeros("000098"));
-    }
+    // public static void main(String[] args) {
+    //     recursion Rec = new recursion();
+    //     System.out.println(Rec.stripZeros("000098"));
+    // }
 }
