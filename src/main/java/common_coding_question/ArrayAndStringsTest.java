@@ -6,6 +6,8 @@ public class ArrayAndStringsTest {
     private final uniqueCharacterDetector uniqueCharacter = new uniqueCharacterDetector();
     private final PermutationDetector permutationDetector = new PermutationDetector();
 
+    private final URLConverter urlConverter = new URLConverter();
+
     @Test
     public void UniqueCharacterDetect() {
         Assert.assertTrue(uniqueCharacter.isUnique("abcdfgh"));
@@ -19,4 +21,10 @@ public class ArrayAndStringsTest {
         Assert.assertFalse(permutationDetector.isPermutation("sunny", "hnah"));
     }
 
+    @Test
+    public void URLify() {
+        // Given length of final string
+        // Replaces all the space in a string ASCII symbol for space '%20'
+        Assert.assertEquals("My%20Home%20Page", urlConverter.urlify("My Home Page", 16));
+    }
 }
