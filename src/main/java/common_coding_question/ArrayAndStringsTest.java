@@ -2,12 +2,16 @@ package src.main.java.common_coding_question;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.Stack;
+
 public class ArrayAndStringsTest {
     private final uniqueCharacterDetector uniqueCharacter = new uniqueCharacterDetector();
     private final PermutationDetector permutationDetector = new PermutationDetector();
-
     private final URLConverter urlConverter = new URLConverter();
     private final OneAwayDetector oneAwayDetector = new OneAwayDetector();
+    private final CompressString compressString = new CompressString();
+    private final RemoveDuplicatesLinkedList linkedList = new RemoveDuplicatesLinkedList();
+    private final SumLinkedList sumStack = new SumLinkedList();
 
     @Test
     public void UniqueCharacterDetect() {
@@ -35,5 +39,40 @@ public class ArrayAndStringsTest {
         Assert.assertTrue(oneAwayDetector.oneAway("pales","pale"));
         Assert.assertFalse(oneAwayDetector.oneAway("pales","bale"));
         Assert.assertFalse(oneAwayDetector.oneAway("pales","bae"));
+    }
+
+    @Test
+    public void CompressString() {
+        // case: compressed string not shorter than original, return original
+        Assert.assertEquals("aabb", compressString.compressor("aabb"));
+        // return compressed string
+        Assert.assertEquals("a4b2c2", compressString.compressor("aaaabbcc"));
+        Assert.assertEquals("b1c4", compressString.compressor("bcccc"));
+    }
+
+    @Test
+    public void setRemoveDuplicates() {
+        linkedList.addFront(1);
+        linkedList.addFront(2);
+        linkedList.addFront(3);
+        linkedList.addFront(4);
+        linkedList.addFront(4);
+
+        Assert.assertEquals("[1, 2, 3, 4]", linkedList.removeDuplicates(linkedList.current));
+    }
+
+    @Test
+    public void setSumStack() {
+        Stack<Object> first = new Stack<>();
+        first.push(0);
+        first.push(7);
+        first.push(5);
+
+        Stack<Object> second = new Stack<>();
+        second.push(5);
+        second.push(4);
+        second.push(1);
+
+        Assert.assertEquals("[7, 1, 5]", sumStack.sum(first, second));
     }
 }
