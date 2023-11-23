@@ -1,9 +1,7 @@
 package src.main.java.common_coding_question;
 import org.junit.Assert;
 import org.junit.Test;
-
 import java.util.Stack;
-
 public class ArrayAndStringsTest {
     private final uniqueCharacterDetector uniqueCharacter = new uniqueCharacterDetector();
     private final PermutationDetector permutationDetector = new PermutationDetector();
@@ -12,6 +10,7 @@ public class ArrayAndStringsTest {
     private final CompressString compressString = new CompressString();
     private final RemoveDuplicatesLinkedList linkedList = new RemoveDuplicatesLinkedList();
     private final SumLinkedList sumStack = new SumLinkedList();
+    private final DetectLoopLinkedList loopLinkedList = new DetectLoopLinkedList();
 
     @Test
     public void UniqueCharacterDetect() {
@@ -74,5 +73,26 @@ public class ArrayAndStringsTest {
         second.push(1);
 
         Assert.assertEquals("[7, 1, 5]", sumStack.sum(first, second));
+    }
+
+    @Test
+    public void loopLinkedListNodeDetector() {
+        // Original case: given a circular linked list,
+        // create an algorithm to determine whether the linked list is circular loop
+        // if you try to add an element, when there is already a cycle, it will result in an infinite loop.
+        // Enhanced case: is to prevent the loop/ duplicated node at addBack step
+        DetectLoopLinkedList.Node node1 = new DetectLoopLinkedList.Node(1);
+        DetectLoopLinkedList.Node node2 = new DetectLoopLinkedList.Node(2);
+        DetectLoopLinkedList.Node node3 = new DetectLoopLinkedList.Node(3);
+        DetectLoopLinkedList.Node node4 = new DetectLoopLinkedList.Node(4);
+        DetectLoopLinkedList.Node node5 = new DetectLoopLinkedList.Node(5);
+
+        loopLinkedList.addBack(node1);
+        loopLinkedList.addBack(node2);
+        loopLinkedList.addBack(node3);
+        loopLinkedList.addBack(node4);
+        loopLinkedList.addBack(node5);
+
+        Assert.assertTrue(loopLinkedList.addBack(node3));
     }
 }
