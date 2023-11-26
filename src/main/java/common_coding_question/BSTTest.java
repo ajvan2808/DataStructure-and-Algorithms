@@ -7,6 +7,7 @@ public class BSTTest {
 
     @Test
     public void testSubTree() {
+        // Given 2 BST: write algorithm to check whether a tree is subtree of another or not
         simpleBST testTree1 = new simpleBST();
         simpleBST testTree2 = new simpleBST();
 
