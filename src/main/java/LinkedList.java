@@ -9,8 +9,8 @@ public class LinkedList {
             this.data = data;
         }
     }
-    static int Size = 0;
-    static Node head;
+    public static int Size = 0;
+    public static Node head;
 
     public void addFront(int data) {
         // create Node

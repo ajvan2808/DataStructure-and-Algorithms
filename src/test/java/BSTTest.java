@@ -1,7 +1,8 @@
-package src.main.java.common_coding_question;
+package src.test.java;
 
 import org.junit.Assert;
 import org.junit.Test;
+import src.main.java.common_coding_question.simpleBST;
 
 public class BSTTest {
 

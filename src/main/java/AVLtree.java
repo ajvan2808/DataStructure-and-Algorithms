@@ -15,7 +15,7 @@ class Node {
  */
 public class AVLtree {
 
-    Node root;
+    public Node root;
 
     // Utility func to get the height of tree
     public int height(Node N) {
@@ -142,7 +142,7 @@ public class AVLtree {
     // A utility function to print preorder traversal of
     // the tree. The function also prints height of every
     // node
-    void preOrder(Node node)
+    public void preOrder(Node node)
     {
         if (node != null)
         {

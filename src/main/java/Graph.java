@@ -11,7 +11,7 @@ public class Graph {
     private LinkedList<Integer> adj[];  // Adjacency list 
 
 
-    Graph(int v) {
+    public Graph(int v) {
         V = v;
         adj = new LinkedList[v];
 
@@ -20,12 +20,12 @@ public class Graph {
         }
     }
 
-    void addEdge(int v, int w) {
+    public void addEdge(int v, int w) {
         adj[v].add(w); 
     }
 
     // BFS from a given source
-    void breadthFirstSearch(int s) {
+    public void breadthFirstSearch(int s) {
         // Mark all vertices as not visited (false)
         boolean visited[] = new boolean[V];
 
@@ -57,7 +57,7 @@ public class Graph {
     }
 
     // DEPTH FIRST SEARCH
-    void DFS(int vertex) {
+    public void DFS(int vertex) {
         boolean marked[] = new boolean[V];
 
         Stack<Integer> stack = new Stack<Integer>();

@@ -1,7 +1,8 @@
-package src.main.java;
+package src.test.java;
 import org.junit.Test;
+import src.main.java.bubbleSort;
 
-public class testBubleSort {
+public class testBubbleSort {
     private bubbleSort BubbleSort;
 
     @Test

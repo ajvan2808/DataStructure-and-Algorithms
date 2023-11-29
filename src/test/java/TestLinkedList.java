@@ -1,8 +1,10 @@
-package src.main.java;
+package src.test.java;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import src.main.java.LinkedList;
 
 public class TestLinkedList {
     private LinkedList linkedList;
@@ -12,13 +14,18 @@ public class TestLinkedList {
         linkedList = new LinkedList();
     }
 
+    @After
+    public void Reset() throws Exception {
+        linkedList.clearList();
+    }
+
     @Test
     public void AddFront() throws Exception {
         linkedList.addFront(1);
         linkedList.addFront(2);
         linkedList.addFront(3);
         
-        Assert.assertEquals(3, linkedList.Size);
+        Assert.assertEquals(3, LinkedList.Size);
         Assert.assertEquals(3, linkedList.getFirst());
         Assert.assertEquals(1, linkedList.getLast());
     }
@@ -52,13 +59,13 @@ public class TestLinkedList {
     
     @Test
     public void sizeOfList() {
-        Assert.assertEquals(0, linkedList.Size);
+        Assert.assertEquals(0, LinkedList.Size);
 
         linkedList.addFront(3);
         linkedList.addFront(2);
         linkedList.addFront(1);
 
-        Assert.assertEquals(3, linkedList.Size);
+        Assert.assertEquals(3, LinkedList.Size);
     }
 
     @Test
@@ -69,8 +76,8 @@ public class TestLinkedList {
 
         linkedList.clearList();
         
-        Assert.assertEquals(null, linkedList.head);
-        Assert.assertEquals(0, linkedList.Size);
+        Assert.assertEquals(null, LinkedList.head);
+        Assert.assertEquals(0, LinkedList.Size);
     }
 
     @Test
