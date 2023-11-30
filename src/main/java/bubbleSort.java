@@ -23,13 +23,13 @@ public class bubbleSort {
         return arr;
     }
 
-    public static void main(String args[])
-    {
-        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
-        sort(arr);
-        int i;
-        for (i = 0; i < arr.length; i++)
-            System.out.print(arr[i] + " ");
-        // System.out.println();
-    }
+//    public static void main(String args[])
+//    {
+//        int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+//        sort(arr);
+//        int i;
+//        for (i = 0; i < arr.length; i++)
+//            System.out.print(arr[i] + " ");
+//        // System.out.println();
+//    }
 }
