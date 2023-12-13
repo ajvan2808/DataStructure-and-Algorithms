@@ -1,6 +1,6 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
-import src.main.java.LinkedList;
+//import src.main.java.LinkedList;
 
 public class DetectLoopLinkedList {
     public static class Node{

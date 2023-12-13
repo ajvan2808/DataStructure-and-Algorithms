@@ -1,8 +1,6 @@
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import src.main.java.fibMemoized;
-import src.main.java.fibonacciNaive;
 
 public class testFibonacci {
     private fibonacciNaive naive;

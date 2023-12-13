@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 /*
 * Given 2 numbers represented by linked lists

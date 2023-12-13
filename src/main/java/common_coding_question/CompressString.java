@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 public class CompressString {
     // Compress a string to only have unique character and its repetitive times

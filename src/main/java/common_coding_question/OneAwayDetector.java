@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 public class OneAwayDetector {
     // Find if any replacement btw original string and new string

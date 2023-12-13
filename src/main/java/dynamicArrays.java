@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class dynamicArrays <String>{
     private Object[] data;
     private int size;
@@ -40,7 +38,7 @@ public class dynamicArrays <String>{
         return size;
     }
 
-    // Dynamically resize the array 
+    // Dynamically resize the array
     public void resize() {
         Object[] newData = new Object[initialCapacity * 2];
         // copy elements from old arr to new one
@@ -49,7 +47,7 @@ public class dynamicArrays <String>{
         }
 
         // re-assign the attributes
-        data = newData; 
+        data = newData;
         initialCapacity = initialCapacity * 2;
     }
 

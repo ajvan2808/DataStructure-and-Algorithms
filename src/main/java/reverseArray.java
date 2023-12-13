@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class reverseArray {
     /*
      * Runtime O(n/2) => O(n)

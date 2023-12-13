@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 public class simpleBST {
     public static class Node {
@@ -12,7 +12,7 @@ public class simpleBST {
         }
     }
 
-    Node root;
+    public Node root;
 
     public simpleBST() { root = null; }
 
@@ -40,6 +40,17 @@ public class simpleBST {
         return node;
     }
 
+    public void addNodeInOrder(Node node1, Node node2, String branch) {
+        if (node1 != null) {
+            switch (branch) {
+                case "left" ->
+                    node1.left = node2;
+                case "right" ->
+                    node1.right = node2;
+            }
+        }
+    }
+
     // Get node order under String type
     public String getOrder() {
         StringBuilder sb = new StringBuilder();
@@ -64,4 +75,37 @@ public class simpleBST {
 
         return order1.contains(order2);
     }
+
+    // Algorithm to found sum of paths to a node
+    public int countPathsWithSum(int targetSum){
+        return countPathsWithSum(root, targetSum);
+    }
+
+    private int countPathsWithSum(Node root, int targetSum) {
+        if (root == null) return 0;
+
+        // count paths with sum starting from root
+        int pathFromRoot = countPathsWithSumFromNode(root, targetSum, 0);
+
+        // Try with Node from left and right
+        int pathFromLeft = countPathsWithSum(root.left, targetSum);
+        int pathFromRight = countPathsWithSum(root.right, targetSum);
+
+        return pathFromRoot + pathFromLeft + pathFromRight;
+    }
+
+    private int countPathsWithSumFromNode(Node node, int targetSum, int currentSum) {
+        if (node == null) return 0;
+
+        currentSum += node.key;
+        int totalPaths = 0;
+        if (currentSum == targetSum) { // Found a path from root
+            totalPaths++;
+        }
+
+        totalPaths += countPathsWithSumFromNode(node.left, targetSum, currentSum);
+        totalPaths += countPathsWithSumFromNode(node.right, targetSum, currentSum);
+        return totalPaths;
+    }
+
 }

@@ -1,5 +1,3 @@
-package src.main.java;
-
 /**
  * fibMemoized
  * optimaized Fibonacci with Memoization algorithm

@@ -1,5 +1,3 @@
-package src.main.java;
-
 class Node {
     int key, height;
     Node left, right;
@@ -53,7 +51,7 @@ public class AVLtree {
         y.height = max(height(y.left), height(y.right) + 1);
         x.height = max(height(x.left), height(x.right) + 1);
 
-        // Return new root 
+        // Return new root
         return x;
     }
 
@@ -86,7 +84,7 @@ public class AVLtree {
     }
 
     private Node insert(Node node, int key) {
-        
+
         // *1 Perform BST insertion
         if (node == null) {
             return new Node(key);
@@ -108,7 +106,7 @@ public class AVLtree {
         // *3 Check balance of ancestor node whether it becomes unbalanced or not
         int balance = getBalance(node);
 
-        // If node become unbalanced, then there're 4 cases 
+        // If node become unbalanced, then there're 4 cases
         // (Left Left Case)
         if(balance > 1 && key < node.left.key) {
             System.out.println("Rotate right.");

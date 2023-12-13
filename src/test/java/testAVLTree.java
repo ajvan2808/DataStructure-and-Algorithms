@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import src.main.java.AVLtree;
 
 public class testAVLTree {
     private AVLtree avl;

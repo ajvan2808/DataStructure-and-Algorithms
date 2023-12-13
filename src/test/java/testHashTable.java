@@ -1,3 +1,5 @@
+package src.test.java;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,7 +27,7 @@ public class testHashTable {
         Assert.assertEquals("521-9655", HashTable.get("Sandra Dee"));
         Assert.assertEquals("418-4165", HashTable.get("Ted Baker"));
     }
-    
+
     @Test
     public void Collision() {
         // these key will collide

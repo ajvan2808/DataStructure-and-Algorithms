@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import src.main.java.Graph;
 
 public class testGraph {
     private Graph G;

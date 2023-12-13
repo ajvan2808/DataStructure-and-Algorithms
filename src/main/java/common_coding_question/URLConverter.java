@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 public class URLConverter {
     public String urlify(String url, int length) {

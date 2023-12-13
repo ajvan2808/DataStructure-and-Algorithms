@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class bigONotation {
 
     // O(n)
@@ -16,7 +14,7 @@ public class bigONotation {
     // O(n * m)
     public void bar(int[] array1, int[] array2) {
         for (int i = 0; i < array1.length; i++) {
-            
+
             for (int j = 0; j < array2.length; j++) {
                 //..
             }

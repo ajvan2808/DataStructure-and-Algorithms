@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class mergeSort {
 
     // main algorithm that split array, sort and merge()

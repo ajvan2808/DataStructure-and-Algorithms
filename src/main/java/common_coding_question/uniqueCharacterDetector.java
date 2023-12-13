@@ -1,4 +1,4 @@
-package src.main.java.common_coding_question;
+package common_coding_question;
 
 public class uniqueCharacterDetector {
     // There are lots of ways we could solve this:

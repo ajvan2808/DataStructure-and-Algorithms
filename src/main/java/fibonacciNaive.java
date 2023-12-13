@@ -1,5 +1,3 @@
-package src.main.java;
-
 // FIB equation : Fn = F(n-1) + F(n-2)
 public class fibonacciNaive {
 

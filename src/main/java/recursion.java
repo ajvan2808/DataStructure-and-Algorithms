@@ -1,5 +1,3 @@
-package src.main.java;
-
 public class recursion {
     
     public String stripZeros(String text) {

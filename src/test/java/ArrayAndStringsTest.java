@@ -1,6 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
-import src.main.java.common_coding_question.*;
+import common_coding_question.*;
 
 import java.util.Stack;
 public class ArrayAndStringsTest {

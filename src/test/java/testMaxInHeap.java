@@ -1,6 +1,5 @@
 import org.junit.Assert;
 import org.junit.Test;
-import src.main.java.maxInHeap;
 
 public class testMaxInHeap {
     private maxInHeap binaryHeap;

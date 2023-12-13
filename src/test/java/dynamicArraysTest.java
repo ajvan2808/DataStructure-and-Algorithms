@@ -1,8 +1,7 @@
-package src.main.java;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import src.main.java.dynamicArrays;
 
 public class dynamicArraysTest {
     private dynamicArrays array;
