@@ -1,5 +1,3 @@
-package src.main.java;
-
 // Hash table basically is array of linked list
 public class hashTable {
     private int INITIAL_SIZE = 16;
@@ -17,7 +15,7 @@ public class hashTable {
         }
     }
 
-    hashTable() {
+    public hashTable() {
         data = new HashEntry[INITIAL_SIZE];
     }
 
@@ -29,7 +27,7 @@ public class hashTable {
         // Create linked list entry
         HashEntry newEntry = new HashEntry(key, value);
 
-        // If no entry - add it 
+        // If no entry - add it
         if(data[index] == null) {
             data[index] = newEntry;
         }
@@ -59,7 +57,7 @@ public class hashTable {
             }
             return entries.value;
         }
-        
+
         // if there's no entry
         return null;
     }
@@ -83,5 +81,5 @@ public class hashTable {
 
         return index;
     }
-    
+
 }

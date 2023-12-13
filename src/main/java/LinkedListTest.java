@@ -1,6 +1,4 @@
-package src.main.java;
-
-public class LinkedList {
+public class LinkedListTest {
     private static class Node {
         int data;
         Node next;
@@ -9,8 +7,8 @@ public class LinkedList {
             this.data = data;
         }
     }
-    static int Size = 0;
-    static Node head;
+    public static int Size = 0;
+    public static Node head;
 
     public void addFront(int data) {
         // create Node
@@ -73,7 +71,7 @@ public class LinkedList {
     }
 
     /* Size of list
-        2 ways checking size of list 
+        2 ways checking size of list
         1. Adding a counter in the list itself to keep trach of the size (best practice)
         2. Loop through the list
     */
@@ -117,6 +115,8 @@ public class LinkedList {
                 return;
             }
         }
-        
+
     }
+
+
 }

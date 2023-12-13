@@ -1,5 +1,3 @@
-package src.main.java;
-
 import java.util.EmptyStackException;
 
 /*
@@ -15,7 +13,7 @@ public class Stacks {
         private Node(int data) {
             this.data = data;
         }
-        
+
     }
     static Node head;
 
@@ -42,7 +40,7 @@ public class Stacks {
         // set the current head.next to be the new head
         // return the value
 
-        if (head == null) 
+        if (head == null)
             throw new EmptyStackException();
 
         int data = head.data;
