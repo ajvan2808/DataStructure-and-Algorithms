@@ -42,12 +42,10 @@ public class simpleBST {
 
     public void addNodeInOrder(Node node1, Node node2, String branch) {
         if (node1 != null) {
-            switch (branch) {
-                case "left" ->
+            if (branch.equals("left"))
                     node1.left = node2;
-                case "right" ->
-                    node1.right = node2;
-            }
+            else if (branch.equals("right"))
+                node1.right = node2;
         }
     }
 
